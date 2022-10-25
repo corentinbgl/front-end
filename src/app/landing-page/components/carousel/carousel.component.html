@@ -1,1 +1,10 @@
-<p>carousel works!</p>
+<swiper 
+      [slidesPerView]="3"
+      [spaceBetween]="1"
+      [navigation]="true"
+    >
+      <ng-template swiperSlide *ngFor="let comic of comics | async">
+        <img  [src]="'../../../assets/'+comic.photo">
+      </ng-template>
+      
+    </swiper>

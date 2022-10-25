@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { Comic } from '../../models/comic.model';
+import { ComicsService } from '../../services/comics.service';
 
 @Component({
   selector: 'app-landing-page',
@@ -6,10 +9,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
+  comicListe$!: Observable<Comic[]>;
 
-  constructor() { }
+  constructor(private comicsServices: ComicsService) { }
+  
 
   ngOnInit(): void {
+    this.comicListe$ = this.comicsServices.getComics()
   }
 
 }
