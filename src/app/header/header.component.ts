@@ -5,13 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent  {
-  title!: string;
-  basket!: number;
+export class HeaderComponent implements OnInit {
+  cart!: number;
 
   ngOnInit() {
-    this.title = "Edward Comics";
-    this.basket = 2;
+    this.cart = 0;
+    
+  }
+  onAddCart(){
+    this.cart++;
+  }
+  onToggle() {
+
   }
 
 }

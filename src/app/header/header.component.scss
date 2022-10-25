@@ -1,13 +1,96 @@
-header {
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
+img {
+    height: 25px;
+    width: 200px;
+}
+nav {
+    display: flex ;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.25em 0;
+    height: 35px;
     background-color: rgb(46, 46, 46);
 }
 .cart {
-    color: red;
-    height: 50px;
-    width: 100px;
+    width: 30px;
+    height: 30px;
+    svg {
+        color: #BE2537;
+        height: 30px;
+        width: 30px;
+        position: relative;
+        z-index: 50;
+    }
+    &::before {
+        content: attr(nbr-item);
+        color: #BE2537;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 100;
+        font-size: 0.7em;
+    }
 }
 .profil {
-    color: red;
-    height: 50px;
-    width: 100px;
+    color: #BE2537;
+    height: 30px;
+    width: 30px;
 }
+.droite {
+    display: flex;
+   align-items: center;
+   margin-right: 10px;
+   gap: 10px;
+}
+.bar {
+    color: #BE2537;
+    height: 30px;
+    width: 30px;
+}
+.search-container{
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  
+  input#search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: none;
+    border-bottom: 1px solid #D0CFCE;
+    outline: none;
+    &:focus{
+      border-bottom: 1px solid #BE2537;
+      transition: 0.35s ease;
+      color: #BE2537;
+      &::-webkit-input-placeholder{
+        transition: opacity 0.45s ease; 
+          opacity: 0;
+       }
+      &::-moz-placeholder {
+        transition: opacity 0.45s ease; 
+          opacity: 0;
+       }
+      &:-ms-placeholder {
+       transition: opacity 0.45s ease; 
+         opacity: 0;
+       }    
+     }
+   }
+  
+  .search-icon{
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+    right: 0;
+  }
