@@ -1,0 +1,30 @@
+.landing-block {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.landing-links {
+    width: 100%;
+    text-align: center;
+}
+
+.new-comics {
+    border: 1px solid black;
+
+    
+    h3 {
+        display: flex;
+        justify-content: center;
+        color: #BE2537;
+        font-weight: bold;
+    }
+    button {
+        background-color: #BE2537;
+        border: 1px solid #BE2537;
+        color: white;
+        width: 150px;
+        margin-left: calc(50% - 75px);
+    }
+}

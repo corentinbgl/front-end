@@ -1,16 +1,12 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-
-import { ComicsEdwardComponent } from './comics-edward/comics-edward.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-
 import { HeaderComponent } from './header/header.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule }from '@angular/platform-browser/animations';
 import { SideBarComponent } from './side-bar/side-bar.component'
+import { LandingPageComponent } from './landing-page/components/landing-page/landing-page.component';
 
 
 @NgModule({
@@ -24,8 +20,7 @@ import { SideBarComponent } from './side-bar/side-bar.component'
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    BrowserAnimationsModule
-
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

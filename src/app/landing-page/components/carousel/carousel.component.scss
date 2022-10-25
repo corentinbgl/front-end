@@ -1,0 +1,34 @@
+@import 'swiper/scss';
+@import 'swiper/scss/navigation';
+@import 'swiper/scss/pagination';
+
+
+.swiper {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+
+    @media screen and (min-width: 1280px) {
+        width: 75%;
+    }
+
+}
+
+
+.swiper-slide img {
+    object-fit: cover;
+    height: 100px;
+}
+.swiper-button-prev, .swiper-button-next {
+    color: white;
+    background: rgb(224, 23, 23);
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    opacity: 50%;
+}
+
+
+.swiper-slide-next> img {
+    height: 200px ;
+}
