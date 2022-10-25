@@ -3,20 +3,21 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { ComicsEdwardComponent } from './comics-edward/comics-edward.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
 
 import { HeaderComponent } from './header/header.component';
+import { LandingPageModule } from './landing-page/landing-page.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LandingPageComponent
+  
+
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    LandingPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
