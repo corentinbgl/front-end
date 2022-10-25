@@ -6,19 +6,19 @@ import { AppRoutingModule } from './app-routing.module';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule }from '@angular/platform-browser/animations';
 import { SideBarComponent } from './side-bar/side-bar.component'
-import { LandingPageComponent } from './landing-page/components/landing-page/landing-page.component';
+import { LandingPageModule } from './landing-page/landing-page.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    LandingPageComponent,
     SideBarComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    LandingPageModule,
     CommonModule,
     BrowserAnimationsModule,
   ],
