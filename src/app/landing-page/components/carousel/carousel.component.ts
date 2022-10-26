@@ -14,6 +14,7 @@ export class CarouselComponent implements OnInit {
 
   @Input() comics!: Observable<Comic[]>;
 
+
   constructor() { }
 
   ngOnInit(): void {

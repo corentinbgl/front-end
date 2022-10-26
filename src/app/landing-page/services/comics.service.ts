@@ -11,7 +11,14 @@ export class ComicsService {
 
   constructor(private http: HttpClient) { }
 
-  getComics(): Observable<Comic[]> {
-    return this.http.get<Comic[]>(`${environment.apiUrl}/comics`);
-}
+  getNewComics(): Observable<Comic[]> {
+    return this.http.get<Comic[]>(`${environment.apiUrl}/comics?nouveaute=true`);
+  }
+
+  getSelectionComics(): Observable<Comic[]>{
+    return this.http.get<Comic[]>(`${environment.apiUrl}/comics?selection=true`);
+  }
+  getUniversComics(): Observable<Comic[]>{
+    return this.http.get<Comic[]>(`${environment.apiUrl}/comics?univers=DC Comics`);
+  }
 }

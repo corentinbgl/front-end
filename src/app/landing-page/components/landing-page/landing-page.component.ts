@@ -9,12 +9,16 @@ import { ComicsService } from '../../services/comics.service';
   styleUrls: ['./landing-page.component.scss']
 })
 export class LandingPageComponent implements OnInit {
-  comicListe$!: Observable<Comic[]>;
+  newComicListe$!: Observable<Comic[]>;
+  selectionComicListe$!: Observable<Comic[]>;
+  universComicListe$!: Observable<Comic[]>;
 
   constructor(private comicsServices: ComicsService) { }
 
   ngOnInit(): void {
-    this.comicListe$ = this.comicsServices.getComics()
+    this.newComicListe$ = this.comicsServices.getNewComics()
+    this.selectionComicListe$ = this.comicsServices.getSelectionComics()
+    this.universComicListe$ = this.comicsServices.getUniversComics()
   }
 
 }

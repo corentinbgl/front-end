@@ -7,12 +7,14 @@ import { CarouselComponent } from './components/carousel/carousel.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SwiperModule } from 'swiper/angular';
 import { ComicsService } from './services/comics.service';
+import { Carousel2Component } from './components-carousel/carousel2/carousel2.component';
 
 
 @NgModule({
   declarations: [
     LandingPageComponent,
-    CarouselComponent
+    CarouselComponent,
+    Carousel2Component
   ],
   imports: [
     CommonModule,

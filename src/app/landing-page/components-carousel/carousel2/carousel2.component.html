@@ -1,0 +1,9 @@
+<swiper [slidesPerView]="2" [spaceBetween]="1" [navigation]="true">
+    <ng-template swiperSlide *ngFor="let comic of buycomics | async">
+      <img [src]="'../../../assets/' + comic.photo" />
+      <p>En stock</p>
+      <h4>200€</h4>
+    </ng-template>
+  </swiper>
+  
+  
