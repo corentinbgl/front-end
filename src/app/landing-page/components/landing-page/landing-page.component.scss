@@ -15,11 +15,14 @@
 .new-comics {
     border: 1px solid black;
     font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
     
     h3 {
-        display: flex;
-        justify-content: center;
+        
+        text-align: center;
         color: #BE2537;
         font-weight: bold;
     }
@@ -34,7 +37,7 @@
     }
 }
 .promo > img {
-    width: 400px;
+    width: 100%;
     margin-top: 8px;
     margin-bottom: 5px;
 }
@@ -43,6 +46,7 @@
     display: flex;
     flex-wrap: wrap;
     margin-top: 5px;
+    justify-content: space-between;
 }
 
 .BD-comics > img {
@@ -52,12 +56,15 @@
 .DC-comics {
     border: 1px solid black;
     font-family: 'Roboto', sans-serif;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
     
     h3 {
-        display: flex;
-        justify-content: center;
+        text-align: center;
         color: #BE2537;
         font-weight: bold;
     }
 
 }
+
