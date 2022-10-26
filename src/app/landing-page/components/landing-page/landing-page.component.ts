@@ -12,12 +12,9 @@ export class LandingPageComponent implements OnInit {
   comicListe$!: Observable<Comic[]>;
 
   constructor(private comicsServices: ComicsService) { }
-  
 
   ngOnInit(): void {
     this.comicListe$ = this.comicsServices.getComics()
   }
 
 }
-
-

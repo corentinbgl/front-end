@@ -1,12 +1,9 @@
-
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
-import SwiperCore, { Navigation, Pagination} from 'swiper';
 import { Comic } from '../../models/comic.model';
+import SwiperCore, { Navigation, Pagination} from 'swiper';
 
-// install Swiper modules
 SwiperCore.use([Navigation, Pagination]);
-
 @Component({
   selector: 'app-carousel',
   templateUrl: './carousel.component.html',
@@ -14,6 +11,7 @@ SwiperCore.use([Navigation, Pagination]);
   encapsulation: ViewEncapsulation.None
 })
 export class CarouselComponent implements OnInit {
+
   @Input() comics!: Observable<Comic[]>;
 
   constructor() { }
