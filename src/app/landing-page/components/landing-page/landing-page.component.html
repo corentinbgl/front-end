@@ -1,5 +1,32 @@
 <div class="new-comics">
     <h3>Nouveautés</h3>
-    <app-carousel [comics]="comicListe$"></app-carousel>
+    <app-carousel [comics]="newComicListe$"></app-carousel>
+
     <button>En savoir plus</button>
+    
+</div>
+<div class="promo">
+    <img src="../../../../assets/assets/promo.png" >
+</div>
+<div class="new-comics">
+    <h3>Sélection du moment</h3>
+    <app-carousel [comics]="selectionComicListe$"></app-carousel>
+    <button>En savoir plus</button>
+</div>
+
+<div class="BD-comics">
+    <img src="../../../../assets/assets/batman.png" >
+    <img src="../../../../assets/assets/justiceleague.png" >
+    <img src="../../../../assets/assets/superman.png" >
+    <img src="../../../../assets/assets/spiderman.png" >
+    <img src="../../../../assets/assets/avengers.png" >
+    <img src="../../../../assets/assets/deadpool.png" >
+</div>
+
+<div class="DC-comics">
+    <h3>DC Comics</h3>
+    <app-carousel2 [buycomics]="universComicListe$"></app-carousel2>
+    <p>En stock</p>
+    <h4>200€</h4>
+    <img src="../../../../assets/assets/img/panier.png">
 </div>
