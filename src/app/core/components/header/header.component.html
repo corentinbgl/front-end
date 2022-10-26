@@ -1,6 +1,6 @@
 <header>
     <nav>
-        <svg (click)="onToggle()" class="bar"xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
+        <svg (click)="toggle()" class="bar"xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"/></svg>
         <img src="../../assets/assets/img/text-logo.png" alt="txt">
         <div class="droite">
             <svg  class="profil" xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"><g fill="currentColor">
@@ -10,9 +10,10 @@
                 0-.554-1.724ZM13.69 32.616c7.796-.863 12.874-.785 20.632.018a2.99 2.99 0 0 1 1.662 5.221c-4.575 3.988-8.385 6.16-12.257 6.145c-3.883-.014-7.525-2.223-11.766-6.158A3.018 3.018 0 0 1 11 35.63a3.028 3.028 0 0 1 2.69-3.015Z" 
                 clip-rule="evenodd"/><path d="M32 20a8 8 0 1 1-16 0a8 8 0 0 1 16 0Z"/>
                 <path fill-rule="evenodd" d="M24 26a6 6 0 1 0 0-12a6 6 0 0 0 0 12Zm0 2a8 8 0 1 0 0-16a8 8 0 0 0 0 16Z" clip-rule="evenodd"/></g>
+                
             </svg>
             
-            <section [attr.nbr-item]="cart" class="cart">
+            <section (click)="basket()" class="cart">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" aria-valuemax="3">
                     <path fill="currentColor" 
                         d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 
@@ -26,9 +27,23 @@
     <section>
         <form class="search-container">
             <input type="text" id="search-bar" placeholder="Rechercher">
-            <a href="#"><img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png"></a>
+            <img class="search-icon" src="http://www.endlessicons.com/wp-content/uploads/2012/12/search-icon.png">
           </form>
     </section>
-   <app-side-bar></app-side-bar>
+    <div @openClose *ngIf="isOpen" class="open-close-container">
+        <section class="menu">
+            <ul>
+                <li class="list">
+                    Acceuil
+                </li>
+                <li class="list">
+                    Marvel
+                </li>
+                <li class="list">
+                    Manga
+                </li>
+            </ul>
+        </section>
+    </div>
     
 </header>
