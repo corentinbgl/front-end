@@ -1,9 +1,14 @@
 <main>
     <div *ngFor=" let comicDetail of comic$ | async">
-        <div class="detail">
-            <img src="./assets/{{comicDetail.photo}}" alt="{{comicDetail.titre}}">
-            titre = {{comicDetail.titre}}
+        <div class="body">
+            <div class="detail">
+                <img src="./assets/{{comicDetail.photo}}" alt="{{comicDetail.titre}}">
+                <h1>{{comicDetail.titre}}</h1>
+                <p>Par {{comicDetail.dessinateur}} / {{comicDetail.scenariste}}</p>
+                <h6>EAN : {{comicDetail.isbn}}</h6>
 
+
+            </div>
         </div>
     </div>
 </main>
