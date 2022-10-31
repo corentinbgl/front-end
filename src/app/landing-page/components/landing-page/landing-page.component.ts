@@ -20,7 +20,6 @@ export class LandingPageComponent implements OnInit {
     this.newComicListe$ = this.comicsServices.getNewComics()
     this.selectionComicListe$ = this.comicsServices.getSelectionComics()
     this.universComicListe$ = this.comicsServices.getUniversComics()
-    // this.detailComic$ = this.comicsServices.getDetailComicsById()
   }
 
 }
