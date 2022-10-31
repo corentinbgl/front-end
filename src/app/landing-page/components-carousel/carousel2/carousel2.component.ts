@@ -16,6 +16,7 @@ export class Carousel2Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
