@@ -1,6 +1,8 @@
 
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Observable } from 'rxjs';
+import { Comic } from 'src/app/landing-page/models/comic.model';
 import { ComicsService } from 'src/app/landing-page/services/comics.service';
 
 
@@ -11,8 +13,8 @@ import { ComicsService } from 'src/app/landing-page/services/comics.service';
 })
 export class DetailcomicsComponent implements OnInit {
 
-  detailComics!: DetailcomicsComponent[];
-
+  comic$!: Observable<Comic[]>;
+  comic!: Comic;
  
   constructor(private route: ActivatedRoute,
               private comicsService: ComicsService) { }
@@ -20,9 +22,9 @@ export class DetailcomicsComponent implements OnInit {
   ngOnInit(): void {
     const routeParams = this.route.snapshot.paramMap;
     const comicsIdFromRoute = String(routeParams.get('comics_id'));
-    
-    const comic$ = this.comicsService.getDetailComicsById(comicsIdFromRoute);
+    this.comic$ = this.comicsService.getDetailComicsById(comicsIdFromRoute);
   }
+
 
   
 }

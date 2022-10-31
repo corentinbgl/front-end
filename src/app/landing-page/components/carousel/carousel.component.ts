@@ -24,5 +24,6 @@ export class CarouselComponent implements OnInit {
   addDetail(comics_id: string){
     this.router.navigateByUrl('detail/' + comics_id);
   }
+  
 
 }

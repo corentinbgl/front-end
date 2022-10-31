@@ -26,7 +26,6 @@ export class LandingPageComponent implements OnInit {
     this.marvelComicListe$ = this.comicsServices.getMarvelComics()
     this.superheroesComicListe$ = this.comicsServices.getSuperHeroesComics()
     this.supervilainsComicListe$ = this.comicsServices.getSuperVilainsComics()
-    // this.detailComic$ = this.comicsServices.getDetailComicsById()
   }
 
 }
