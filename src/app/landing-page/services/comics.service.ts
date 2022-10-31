@@ -9,6 +9,7 @@ import { Comic } from '../models/comic.model';
   providedIn: 'root'
 })
 export class ComicsService {
+  
 
   constructor(private http: HttpClient) { }
 
@@ -22,6 +23,16 @@ export class ComicsService {
   getUniversComics(): Observable<Comic[]>{
     return this.http.get<Comic[]>(`${environment.apiUrl}/comics?univers=DC Comics`);
   }
+  getMarvelComics(): Observable<Comic[]> {
+    return this.http.get<Comic[]>(`${environment.apiUrl}/comics?editeur=Marvel`);
+  }
+  getSuperHeroesComics(): Observable<Comic[]> {
+    return this.http.get<Comic[]>(`${environment.apiUrl}/comics?categorie=Super-héros`);
+  }
+  getSuperVilainsComics(): Observable<Comic[]> {
+    return this.http.get<Comic[]>(`${environment.apiUrl}/comics?categorie=Super-vilains`);
+  }
+
   getDetailComicsById(detailComicsId: string): Observable<Comic[]>{
     return this.http.get<Comic[]>(`${environment.apiUrl}/comics?id=${detailComicsId}`);
   }

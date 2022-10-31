@@ -7,7 +7,7 @@
 
     </div>
     <div class="promo">
-        <img src="../../../../assets/assets/promo.png" >
+        <img src="../../../../assets/assets/promo.png">
     </div>
     <div class="new-comics">
         <h3>Sélection du moment</h3>
@@ -27,5 +27,20 @@
     <div class="DC-comics">
         <h3>DC Comics</h3>
         <app-carousel2 [buycomics]="universComicListe$"></app-carousel2>
+    </div>
+    <div class="Marvel">
+        <h3>Marvel</h3>
+        <app-carousel2 [buycomics]="marvelComicListe$"></app-carousel2>
+    </div>
+    <div class="comic-con">
+        <img src="../../../../assets/assets/comicon.png">
+    </div>
+    <div class="Super-heroes">
+        <h3>Super heroes</h3>
+        <app-carousel2 [buycomics]="superheroesComicListe$"></app-carousel2>
+    </div>
+    <div class="Super-vilains">
+        <h3>Super vilains</h3>
+        <app-carousel2 [buycomics]="supervilainsComicListe$"></app-carousel2>
     </div>
 </main>
