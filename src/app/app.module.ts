@@ -10,6 +10,7 @@ import { MarvelComponent } from './marvel/marvel.component';
 import { MangaComponent } from './manga/manga.component';
 import {  HttpClientModule } from '@angular/common/http';
 import { DetailcomicsComponent } from './comics/components/detailcomics/detailcomics.component';
+import { FooterComponent } from './core/components/footer/footer.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DetailcomicsComponent } from './comics/components/detailcomics/detailco
     AppComponent,
     MarvelComponent,
     MangaComponent,
-    DetailcomicsComponent
+    DetailcomicsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
