@@ -1,5 +1,8 @@
+
 import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
+import { ComicsService } from 'src/app/landing-page/services/comics.service';
+
 
 @Component({
   selector: 'app-detailcomics',
@@ -8,16 +11,18 @@ import { Observable } from 'rxjs';
 })
 export class DetailcomicsComponent implements OnInit {
 
- 
-  buttonText!: string;
-  route: any;
+  detailComics!: DetailcomicsComponent[];
 
-  constructor() { }
+ 
+  constructor(private route: ActivatedRoute,
+              private comicsService: ComicsService) { }
 
   ngOnInit(): void {
-    this.buttonText = 'Oh Snap!';
-    const faceSnapId = +this.route.snapshot.params['id'];
-    // this.detailComics$ = this.detailComics.Service.getFaceSnapById(faceSnapId);
+    const routeParams = this.route.snapshot.paramMap;
+    const comicsIdFromRoute = String(routeParams.get('comics_id'));
+    
+    const comic$ = this.comicsService.getDetailComicsById(comicsIdFromRoute);
   }
 
+  
 }

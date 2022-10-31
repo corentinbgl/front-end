@@ -21,8 +21,8 @@ export class CarouselComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addDetail(){
-    this.router.navigateByUrl('detail')
+  addDetail(comics_id: string){
+    this.router.navigateByUrl('detail/' + comics_id);
   }
 
 }

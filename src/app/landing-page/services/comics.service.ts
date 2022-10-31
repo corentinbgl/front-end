@@ -22,7 +22,7 @@ export class ComicsService {
   getUniversComics(): Observable<Comic[]>{
     return this.http.get<Comic[]>(`${environment.apiUrl}/comics?univers=DC Comics`);
   }
-  getDetailComicsById(detailComicsId: number): Observable<Comic[]>{
-    return this.http.get<Comic[]>(`http://localhost:3000/comics/${detailComicsId}`);
+  getDetailComicsById(detailComicsId: string): Observable<Comic[]>{
+    return this.http.get<Comic[]>(`${environment.apiUrl}/comics?id=${detailComicsId}`);
   }
 }

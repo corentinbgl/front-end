@@ -14,7 +14,7 @@ const routes: Routes = [
     { path: 'panier', component : PanierComponent },
     { path: 'marvel', component : MarvelComponent },
     { path: 'manga', component : MangaComponent },
-    { path: 'detail', component : DetailcomicsComponent },
+    { path: 'detail/:comics_id', component : DetailcomicsComponent },
     
 ];
 
