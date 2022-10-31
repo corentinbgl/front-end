@@ -1,6 +1,6 @@
 <div class="new-comics">
     <h3>Nouveautés</h3>
-    <app-carousel [comics]="newComicListe$"></app-carousel>
+    <app-carousel [comics]="newComicListe$" , *ngFor="let detailComic of detailComic$ |async" ></app-carousel>
 
     <button>En savoir plus</button>
     

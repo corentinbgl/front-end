@@ -6,15 +6,25 @@ import { BrowserAnimationsModule }from '@angular/platform-browser/animations';
 import { CoreModule } from './core/core.module';
 
 
+import { MarvelComponent } from './marvel/marvel.component';
+import { MangaComponent } from './manga/manga.component';
+import {  HttpClientModule } from '@angular/common/http';
+import { DetailcomicsComponent } from './comics/components/detailcomics/detailcomics.component';
+
+
 @NgModule({
   declarations: [
     AppComponent,
+    MarvelComponent,
+    MangaComponent,
+    DetailcomicsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
