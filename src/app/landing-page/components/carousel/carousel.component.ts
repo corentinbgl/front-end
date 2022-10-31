@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Comic } from '../../models/comic.model';
 import SwiperCore, { Navigation, Pagination} from 'swiper';
+import { Router } from '@angular/router';
 
 SwiperCore.use([Navigation, Pagination]);
 @Component({
@@ -15,9 +16,13 @@ export class CarouselComponent implements OnInit {
   @Input() comics!: Observable<Comic[]>;
 
 
-  constructor() { }
+  constructor(private router : Router) { }
 
   ngOnInit(): void {
+  }
+
+  addDetail(){
+    this.router.navigateByUrl('detail')
   }
 
 }

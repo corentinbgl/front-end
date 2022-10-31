@@ -1,31 +1,29 @@
-<main>
-    <div class="new-comics">
-        <h3>Nouveautés</h3>
-        <app-carousel [comics]="newComicListe$"></app-carousel>
+<div class="new-comics">
+    <h3>Nouveautés</h3>
+    <app-carousel [comics]="newComicListe$" , *ngFor="let detailComic of detailComic$ |async" ></app-carousel>
 
-        <button>En savoir plus</button>
-        
-    </div>
-    <div class="promo">
-        <img src="../../../../assets/assets/promo.png" >
-    </div>
-    <div class="new-comics">
-        <h3>Sélection du moment</h3>
-        <app-carousel [comics]="selectionComicListe$"></app-carousel>
-        <button>En savoir plus</button>
-    </div>
+    <button>En savoir plus</button>
+    
+</div>
+<div class="promo">
+    <img src="../../../../assets/assets/promo.png" >
+</div>
+<div class="new-comics">
+    <h3>Sélection du moment</h3>
+    <app-carousel [comics]="selectionComicListe$"></app-carousel>
+    <button>En savoir plus</button>
+</div>
 
-    <div class="BD-comics">
-        <img src="../../../../assets/assets/batman.png" >
-        <img src="../../../../assets/assets/justiceleague.png" >
-        <img src="../../../../assets/assets/superman.png" >
-        <img src="../../../../assets/assets/spiderman.png" >
-        <img src="../../../../assets/assets/avengers.png" >
-        <img src="../../../../assets/assets/deadpool.png" >
-    </div>
+<div class="BD-comics">
+    <img src="../../../../assets/assets/batman.png" >
+    <img src="../../../../assets/assets/justiceleague.png" >
+    <img src="../../../../assets/assets/superman.png" >
+    <img src="../../../../assets/assets/spiderman.png" >
+    <img src="../../../../assets/assets/avengers.png" >
+    <img src="../../../../assets/assets/deadpool.png" >
+</div>
 
-    <div class="DC-comics">
-        <h3>DC Comics</h3>
-        <app-carousel2 [buycomics]="universComicListe$"></app-carousel2>
-    </div>
-</main>
+<div class="DC-comics">
+    <h3>DC Comics</h3>
+    <app-carousel2 [buycomics]="universComicListe$"></app-carousel2>
+</div>

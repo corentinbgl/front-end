@@ -1,5 +1,6 @@
 import { animate, style, transition, trigger } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-header',
@@ -18,7 +19,9 @@ import { Component, OnInit } from '@angular/core';
   ])]
 })
 export class HeaderComponent implements OnInit {
- 
+  
+  constructor(private router: Router){}
+
   isOpen = false;
 
   ngOnInit(): void {}
@@ -28,6 +31,21 @@ export class HeaderComponent implements OnInit {
     this.isOpen = !this.isOpen
   }
   basket() {
-    window.alert("panier vide");
+    window.alert("Votre panier est vide");
+  }
+  onPanier(){
+    this.router.navigateByUrl('panier')
+  }
+  onAcceuil(){
+    this.router.navigateByUrl('')
+  }
+  onMarvel(){
+    this.router.navigateByUrl('marvel')
+  }
+  onProfil(){
+    this.router.navigateByUrl('profil')
+  }
+  onManga(){
+    this.router.navigateByUrl('manga')
   }
 }

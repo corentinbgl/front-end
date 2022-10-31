@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Comic } from '../models/comic.model';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,5 +21,8 @@ export class ComicsService {
   }
   getUniversComics(): Observable<Comic[]>{
     return this.http.get<Comic[]>(`${environment.apiUrl}/comics?univers=DC Comics`);
+  }
+  getDetailComicsById(detailComicsId: number): Observable<Comic[]>{
+    return this.http.get<Comic[]>(`http://localhost:3000/comics/${detailComicsId}`);
   }
 }
