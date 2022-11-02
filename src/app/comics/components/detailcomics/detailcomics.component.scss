@@ -9,6 +9,33 @@
 .detail{
     display: flex;
     flex-direction: column;
-
-
+}
+.etat{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.dispo {
+    height: 10px;
+    width: 70px;
+    background-color: green;
+    color: white;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+.indispo {
+    height: 10px;
+    width: 80px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    padding-bottom: 10px;
+}
+.preco {
+    height: 10px;
+    width: 80px;
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    padding-bottom: 10px;
 }

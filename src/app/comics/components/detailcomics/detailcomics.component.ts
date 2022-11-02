@@ -15,6 +15,7 @@ export class DetailcomicsComponent implements OnInit {
 
   comic$!: Observable<Comic[]>;
   comic!: Comic;
+  
  
   constructor(private route: ActivatedRoute,
               private comicsService: ComicsService) { }
@@ -25,6 +26,6 @@ export class DetailcomicsComponent implements OnInit {
     this.comic$ = this.comicsService.getDetailComicsById(comicsIdFromRoute);
   }
 
-
+  
   
 }

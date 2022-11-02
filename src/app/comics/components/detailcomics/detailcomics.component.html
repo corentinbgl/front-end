@@ -6,6 +6,13 @@
                 <h1>{{comicDetail.titre}}</h1>
                 <p>Par {{comicDetail.dessinateur}} / {{comicDetail.scenariste}}</p>
                 <h6>EAN : {{comicDetail.isbn}}</h6>
+                <div class="etat">
+                    <p>Etat : </p>
+                    <span class="dispo" *ngIf="comicDetail.disponibilite === '1' ">Disponible</span>
+                    <span class="indispo" *ngIf="comicDetail.disponibilite === '2'">Indisponible</span>
+                    <span class="preco" *ngIf="comicDetail.disponibilite === '3'">Précomande</span>
+                </div>
+                <h1>{{comicDetail.prix}}</h1>
 
 
             </div>
