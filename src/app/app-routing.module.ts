@@ -14,7 +14,6 @@ const routes: Routes = [
     { path: 'panier', component : PanierComponent },
     { path: 'marvel', component : MarvelComponent },
     { path: 'manga', component : MangaComponent },
-    
 ];
 
 @NgModule({
