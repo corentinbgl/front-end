@@ -19,8 +19,8 @@ export class Carousel2Component implements OnInit {
   ngOnInit(): void { 
   }
 
-  addPanier(comics_id: string){
-    this.router.navigateByUrl('panier/' + comics_id);
+  addPanier(){
+    
   }
 
 }

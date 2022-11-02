@@ -9,7 +9,15 @@ import { Injectable } from '@angular/core';
 export class PanierService {
   
 
-  constructor(private http: HttpClient) { }
+
+  constructor(private http: HttpClient) {
+    
+  }
+  addPanier(comics_id: string){
+    
+  }
+
+  
 
   
 }

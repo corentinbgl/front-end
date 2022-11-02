@@ -1,28 +1,51 @@
-.modal {
-    visibility: hidden;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+main{
+    font-family: 'Roboto', sans-serif;
     background: rgba(0, 0, 0, 0.29);
+    width: 100vw;
+    height: 100vh;
 }
 
-.modal:target {
-    visibility: visible;
-    opacity: 1;
-}
-.modal_content {
-    background-color: white;
-    padding: 1.5em 2em;
-    width: 500px;
-    max-width: 90%;
+
+.title{
+
+
+    .close{
+        color: #BE2537;
+        display: flex;
+        justify-content: flex-end;
+    }
+    h3 {
+        text-align: center;
+        color: #BE2537;
+    }
 }
 
-.modal_close {
-    position: absolute;
-    right: 15px;
-    top: 15px;
-    text-decoration: none;
+.BD {
+    border: 1px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    .prix {
+        color: #BE2537;
+        display: flex;
+        align-items: center;
+    }
+    
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    button{
+        background-color: #BE2537;
+        color: white;
+        border: none;
+        width: 157px;
+        height: 29px;
+        border-radius: 6px;
+        margin: 5px;
+    }
 }
