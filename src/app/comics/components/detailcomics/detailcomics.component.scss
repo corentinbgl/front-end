@@ -1,5 +1,5 @@
 .body{
-    background-color: #C4C4C4;
+    background-color: rgba(196, 196, 196, 0.17);
     margin: 20px;
     padding: 10px;
 }
@@ -20,7 +20,7 @@
     width: 70px;
     background-color: green;
     color: white;
-    padding: 5px;
+    padding: 3px;
     padding-bottom: 10px;
 }
 .indispo {
@@ -38,4 +38,16 @@
     color: white;
     padding: 5px;
     padding-bottom: 10px;
+}
+.ajout {
+    width: 320px;
+    height: 63px;
+    border: none;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.438);
+    border-radius: 8px;
+    background-color: rgb(177, 16, 16);
+    color: white;
+}
+p {
+    margin: 0;
 }

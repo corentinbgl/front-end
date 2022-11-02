@@ -22,7 +22,7 @@ export class CarouselComponent implements OnInit {
   }
 
   addDetail(comics_id: string){
-    this.router.navigateByUrl('detail/' + comics_id);
+    this.router.navigateByUrl('comics/detail/' + comics_id);
   }
   
 
