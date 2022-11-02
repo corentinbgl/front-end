@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './components/header/header.component';
 import { PanierComponent } from './panier/panier.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AlertPanierComponent } from './alert-panier/alert-panier.component';
 
 
 
@@ -11,7 +12,8 @@ import { FooterComponent } from './components/footer/footer.component';
   declarations: [
     HeaderComponent,
     PanierComponent,
-    FooterComponent
+    FooterComponent,
+    AlertPanierComponent
   ],
   imports: [
     CommonModule
