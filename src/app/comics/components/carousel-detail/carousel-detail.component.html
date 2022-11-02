@@ -1,0 +1,13 @@
+<swiper class="height-swipper" [slidesPerView]="3" [spaceBetween]="1" [navigation]="true">
+    <ng-template swiperSlide *ngFor="let comic of buycomics | async">
+        <div class="containers" style="border: 1px solid black;background-color: white;">
+          <img [src]="'../../../assets/' + comic.photo" style="height: 100px;"/>
+          <p>{{ comic.disponibilite === "1" ? 'Disponible' : (comic.disponibilite === "2" ? 'Indisponible' : 'Précomande')}}</p>
+          <!-- <p *ngIf="comic.disponibilite === '1'">Disponible</p>
+          <p *ngIf="comic.disponibilite === '2'">Indisponible</p>
+          <p *ngIf="comic.disponibilite === '3'">Précomande</p> -->
+          <h4>{{ comic.prix | currency:'EUR'}}</h4>
+          <img src="../../../../assets/assets/img/panier.png" style="height: 20px; width: 20px;">
+        </div>
+    </ng-template>
+  </swiper>
