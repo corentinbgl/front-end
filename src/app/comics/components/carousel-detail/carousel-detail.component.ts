@@ -13,6 +13,7 @@ import { Comic } from 'src/app/landing-page/models/comic.model';
 
 export class CarouselDetailComponent implements OnInit {
   @Input() buycomics!: Observable<Comic[]>;
+  
 
   constructor() { }
 

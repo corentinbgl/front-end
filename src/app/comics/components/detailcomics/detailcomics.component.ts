@@ -1,7 +1,7 @@
 
 import { Component,  OnInit } from '@angular/core';
 import { ActivatedRoute,  } from '@angular/router';
-import { Observable } from 'rxjs';
+import { map, Observable } from 'rxjs';
 import { Comic } from 'src/app/landing-page/models/comic.model';
 import { ComicsService } from 'src/app/landing-page/services/comics.service';
 
@@ -17,7 +17,7 @@ export class DetailcomicsComponent implements OnInit {
  
 
   comic$!: Observable<Comic[]>;
-  comic!: Comic;
+  comicsSame$!: Observable<Comic[]>
   
  
   constructor(private route: ActivatedRoute,
@@ -25,9 +25,14 @@ export class DetailcomicsComponent implements OnInit {
               ) { }
 
   ngOnInit(): void {
-    const routeParams = this.route.snapshot.paramMap;
-    const comicsIdFromRoute = String(routeParams.get('comics_id'));
+    const getRouteParams = this.route.snapshot.paramMap;
+    const comicsIdFromRoute = String(getRouteParams.get('comics_id'));
     this.comic$ = this.comicsService.getDetailComicsById(comicsIdFromRoute);
+    let cat: string;
+    this.comic$.pipe(map((comics: Comic[]) => comics[0].categorie)).subscribe(
+      (categorie: string) => this.comicsSame$ = this.comicsService.getComicsByCategorie(categorie)
+      );
+    
   }
  
   

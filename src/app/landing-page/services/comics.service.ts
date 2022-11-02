@@ -36,4 +36,7 @@ export class ComicsService {
   getDetailComicsById(detailComicsId: string): Observable<Comic[]>{
     return this.http.get<Comic[]>(`${environment.apiUrl}/comics?id=${detailComicsId}`);
   }
+  getComicsByCategorie(categorie: string): Observable<Comic[]>{
+    return this.http.get<Comic[]>(`${environment.apiUrl}/comics?categorie=${categorie}`);
+  }
 }
