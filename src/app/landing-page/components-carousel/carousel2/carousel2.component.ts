@@ -1,4 +1,5 @@
 import { Component, Input, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Comic } from '../../models/comic.model';
 
@@ -13,10 +14,13 @@ import { Comic } from '../../models/comic.model';
 export class Carousel2Component implements OnInit {
   @Input() buycomics!: Observable<Comic[]>;
 
-  constructor() { }
+  constructor(private router : Router) { }
 
-  ngOnInit(): void {
-    
+  ngOnInit(): void { 
+  }
+
+  addPanier(comics_id: string){
+    this.router.navigateByUrl('panier/' + comics_id);
   }
 
 }

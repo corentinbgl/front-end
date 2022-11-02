@@ -16,6 +16,7 @@ export class LandingPageComponent implements OnInit {
   superheroesComicListe$!: Observable<Comic[]>;
   supervilainsComicListe$!: Observable<Comic[]>;
   detailComic$!: Observable<Comic[]>;
+  panierComic$!: Observable<Comic[]>;
 
   constructor(private comicsServices: ComicsService) { }
 

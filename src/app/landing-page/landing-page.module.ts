@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SwiperModule } from 'swiper/angular';
 import { ComicsService } from './services/comics.service';
 import { Carousel2Component } from './components-carousel/carousel2/carousel2.component';
-
+import { CoreModule } from '../core/core.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +20,8 @@ import { Carousel2Component } from './components-carousel/carousel2/carousel2.co
     CommonModule,
     LandingPageRoutingModule,
     HttpClientModule,
-    SwiperModule
+    SwiperModule,
+    CoreModule
   ],
   providers: [
     ComicsService

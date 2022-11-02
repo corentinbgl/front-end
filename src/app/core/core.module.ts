@@ -4,6 +4,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { PanierComponent } from './panier/panier.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AlertPanierComponent } from './alert-panier/alert-panier.component';
+import { PanierService } from './services/panier.service';
 
 
 
@@ -21,7 +22,11 @@ import { AlertPanierComponent } from './alert-panier/alert-panier.component';
   exports: [
     HeaderComponent,
     PanierComponent,
-    FooterComponent
+    FooterComponent,
+    AlertPanierComponent
+  ],
+  providers: [
+    PanierService
   ]
 })
 export class CoreModule { }
