@@ -1,3 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap');
+
 footer {
     background-color: #4D4747;
+    font-family: 'Roboto', sans-serif;
+    height: calc(100vh - 300px);
+}
+.img-edward {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.a_propos {
+    margin-left: 15px;
+    h3 {
+        color: white;
+    }
+    p {
+        color: #E84B4B;
+        font-weight: bold;
+        line-height: 0.44em;
+    }
+}
+.contacts {
+    margin-left: 15px;
+    h3 {
+        color: white;
+    }
+    
+    p, a{
+        color: #E84B4B;
+        font-weight: bold;
+        line-height: 0.44em;
+    }
+}
+.horaires {
+    margin-left: 15px;
+    h3 {
+        color: white;
+    }
+    p {
+        color: #E84B4B;
+        font-weight: bold;
+        line-height: 0.44em;
+    }
 }
